@@ -1,0 +1,3 @@
+# ngx-panels
+
+Angular Panels
