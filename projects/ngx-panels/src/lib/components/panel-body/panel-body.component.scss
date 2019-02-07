@@ -1,0 +1,14 @@
+// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
+
+:host {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.ngx-panel-body {
+    &__content {
+        &--auto-padding {
+            padding: 16px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ngx-panel-ngx-panels',
+  selector: 'ngx-panel',
   template: `
     <p>
       ngx-panels works better!
