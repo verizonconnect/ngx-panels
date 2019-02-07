@@ -1,0 +1,108 @@
+// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
+
+// VZC COLOR PALETTE
+// Primary Colors
+$red: #d52b1e;
+$black: #000000;
+$white: #ffffff;
+$blue: #0088ce;
+$orange: #ed7000;
+$yellow: #ffbc3d;
+$green: #00ac3e;
+
+// Secondary Colors
+$cool-gray: #fafafa;
+$cool-gray-1: #f6f6f6;
+$cool-gray-2: #f2f3f3;
+$cool-gray-3: #ececec;
+$cool-gray-4: #d8dada;
+$cool-gray-5: #b5b9b9;
+$cool-gray-6: #747676;
+$cool-gray-7: #525454;
+$cool-gray-8: #333333;
+$cool-gray-9: #1a1a1a;
+
+// Tertiary Colors
+$red-hue-1: #fdf5f4;
+$red-hue-2: #e65b51;
+$red-hue-3: $red;
+$red-hue-4: #a82218;
+$red-hue-5: #7c1911;
+
+$blue-hue-1: #f0faff;
+$blue-hue-2: #57c6ff;
+$blue-hue-3: $blue;
+$blue-hue-4: #00669b;
+$blue-hue-5: #004568;
+
+$orange-hue-1: #fff5ed;
+$orange-hue-2: #ffb776;
+$orange-hue-3: $orange;
+$orange-hue-4: #cb6000;
+$orange-hue-5: #984800;
+
+$yellow-hue-1: #fff7e7;
+$yellow-hue-2: #ffd381;
+$yellow-hue-3: $yellow;
+$yellow-hue-4: #f8a200;
+$yellow-hue-5: #c58100;
+
+$green-hue-1: #f0fff5;
+$green-hue-2: #6be479;
+$green-hue-3: $green;
+$green-hue-4: #008a32;
+$green-hue-5: #006826;
+
+// utility functions
+@mixin selectable() {
+    cursor: pointer;
+    user-select: none;
+}
+
+@mixin regularShadow() {
+    box-shadow: 0 1px 2px 0 rgba($grey-hue-3,0.36);
+}
+
+@mixin hoverShadow1dp() {
+    box-shadow: 0 0 2px 0 rgba($black,0.14), 0 2px 2px 0 rgba($black,0.12), 0 1px 3px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow2dp() {
+    box-shadow: 0 2px 4px 0 rgba($black,0.14), 0 3px 4px 0 rgba($black,0.12), 0 1px 5px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow3dp() {
+    box-shadow: 0 3px 3px 0 rgba($black,0.14), 0 3px 4px 0 rgba($black,0.12), 0 1px 8px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow4dp() {
+    box-shadow: 0 2px 4px 0 rgba($black,0.14), 0 4px 5px 0 rgba($black,0.12), 0 1px 10px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow6dp() {
+    box-shadow: 0 6px 10px 0 rgba($black,0.14), 0 1px 18px 0 rgba($black,0.12), 0 3px 5px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow8dp() {
+    box-shadow: 0 8px 10px 1px rgba($black,0.14), 0 3px 14px 3px rgba($black,0.12), 0 4px 5px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow9dp() {
+    box-shadow: 0 9px 12px 1px rgba($black,0.14), 0 3px 16px 2px rgba($black,0.12), 0 5px 6px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow12dp() {
+    box-shadow: 0 12px 17px 2px rgba($black,0.14), 0 5px 22px 4px rgba($black,0.12), 0 7px 8px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow16dp() {
+    box-shadow: 0 16px 24px 2px rgba($black,0.14), 0 6px 30px 5px rgba($black,0.12), 0 8px 10px 0 rgba($black,0.2);
+}
+
+@mixin hoverShadow24dp() {
+    box-shadow: 0 24px 38px 3px rgba($black,0.14), 0 9px 46px 8px rgba($black,0.12), 0 11px 15px 0 rgba($black,0.2);
+}
+
+@mixin errorShadow() {
+    box-shadow: 0 2px 8px 0 rgba($red, .35), 0 1px 4px 0 rgba($red, .52);
+}

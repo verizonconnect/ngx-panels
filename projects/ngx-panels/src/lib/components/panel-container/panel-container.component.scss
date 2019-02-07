@@ -1,0 +1,25 @@
+// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
+
+@import '../../../styles/utils';
+
+.ngx-panel-container {
+    &__main {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+    }
+
+    &__panels {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $white;
+        display: flex;
+        flex-direction: column;
+    }
+}
