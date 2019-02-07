@@ -4,10 +4,10 @@ import { TestBed } from '@angular/core/testing';
 
 import { PanelService } from './panel.service';
 import { PanelStatusService } from './panel-status.service';
-import { SidePanelStatusFakeService, SidePanelFakeComponent } from '../../../../test/fakes';
 import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
 import { Component, NgModule } from '@angular/core';
 import { PanelRef } from '../classes/panel-ref.class';
+import { PanelFakeComponent, PanelStatusFakeService } from '../../fakes';
 
 @Component({
     template: '<div><div>'
@@ -15,18 +15,18 @@ import { PanelRef } from '../classes/panel-ref.class';
 class ContentFakeComponent {}
 
 @NgModule({
-    declarations: [ContentFakeComponent, SidePanelFakeComponent],
-    entryComponents: [ContentFakeComponent, SidePanelFakeComponent]
+    declarations: [ContentFakeComponent, PanelFakeComponent],
+    entryComponents: [ContentFakeComponent, PanelFakeComponent]
 })
 class TestModule {}
 
 describe('PanelService', () => {
     let service: PanelService;
-    let panelStatusService: SidePanelStatusFakeService;
+    let panelStatusService: PanelStatusFakeService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [PanelService, { provide: PanelStatusService, useClass: SidePanelStatusFakeService }],
+            providers: [PanelService, { provide: PanelStatusService, useClass: PanelStatusFakeService }],
             imports: [TestModule]
         });
 
@@ -139,22 +139,22 @@ describe('PanelService', () => {
         });
 
         it('should return panelRef populated with data', () => {
-            const panelRef: PanelRef<number> = service['appendPanel'](SidePanelFakeComponent, ContentFakeComponent, 41);
+            const panelRef: PanelRef<number> = service['appendPanel'](PanelFakeComponent, ContentFakeComponent, 41);
             expect(panelRef.data).toBe(41);
         });
 
         it('should return panelRef with proper container', () => {
-            const panelRef: PanelRef<number> = service['appendPanel'](SidePanelFakeComponent, ContentFakeComponent, 41);
+            const panelRef: PanelRef<number> = service['appendPanel'](PanelFakeComponent, ContentFakeComponent, 41);
             expect(panelRef['panelContainer']).toBe(container);
         });
 
         it('should insert content in its container', () => {
-            const panelRef: PanelRef<number> = service['appendPanel'](SidePanelFakeComponent, ContentFakeComponent, 41);
+            const panelRef: PanelRef<number> = service['appendPanel'](PanelFakeComponent, ContentFakeComponent, 41);
             expect(panelRef.panelComponentRef.instance.contentContainer.insert).toHaveBeenCalled();
         });
 
         it('should call destroyTopPanel method if panelCloseAnimationEnd of panel emits', () => {
-            const panelRef: PanelRef<number> = service['appendPanel'](SidePanelFakeComponent, ContentFakeComponent, 41);
+            const panelRef: PanelRef<number> = service['appendPanel'](PanelFakeComponent, ContentFakeComponent, 41);
             panelRef.panelComponentRef.instance.panelCloseAnimationEnd.emit();
             expect(container.destroyTopPanel).toHaveBeenCalled();
         });

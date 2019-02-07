@@ -70,7 +70,7 @@ describe('PanelComponent', () => {
 
     describe('HTML', () => {
         it('should manage animation through panelState context', () => {
-            const panel = fixture.debugElement.query(By.css('.ngx-panels__main'));
+            const panel = fixture.debugElement.query(By.css('.ngx-panel__main'));
             expect(panel.nativeElement.classList).toContain('ng-trigger-panelState');
         });
     });

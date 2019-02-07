@@ -5,15 +5,15 @@ import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 import { PanelHeaderComponent } from './panel-header.component';
-import { PanelRefFake } from '../../../../../test/fakes';
 import { PanelRef } from '../../classes/panel-ref.class';
 import { of } from 'rxjs';
+import { PanelRefFake } from 'projects/ngx-panels/src/fakes';
 
 @Component({
     selector: 'ngx-panel-header-host',
-    template: `<ngx-panels-header [autoPadding]="autoPadding">
+    template: `<ngx-panel-header [autoPadding]="autoPadding">
         <div class="transcluded"></div>
-    </ngx-panels-header>`
+    </ngx-panel-header>`
 })
 class HostComponent {
     autoPadding = true;
@@ -54,27 +54,27 @@ describe('PanelHeaderComponent', () => {
     });
 
     describe('HTML', () => {
-        const mainSelector = '.ngx-panels-header__main';
-        const contentSelector = '.ngx-panels-header__content';
-        const closeBtnSelector = '.ngx-panels-header__close';
-        const autoPaddingClass = 'ngx-panels-header__main--auto-padding';
-        const disabledClass = 'ngx-panels-header__close--disabled';
+        const mainSelector = '.ngx-panel-header__main';
+        const contentSelector = '.ngx-panel-header__content';
+        const closeBtnSelector = '.ngx-panel-header__close';
+        const autoPaddingClass = 'ngx-panel-header__main--auto-padding';
+        const disabledClass = 'ngx-panel-header__close--disabled';
 
-        it('should add ngx-panels-header__main--auto-padding if autoPadding input is true', () => {
+        it('should add ngx-panel-header__main--auto-padding if autoPadding input is true', () => {
             hostComponent.autoPadding = true;
             fixture.detectChanges();
             const main = fixture.debugElement.query(By.css(mainSelector));
             expect(main.nativeElement.classList.contains(autoPaddingClass)).toBe(true);
         });
 
-        it('should not add ngx-panels-header__main--auto-padding if autoPadding input is false', () => {
+        it('should not add ngx-panel-header__main--auto-padding if autoPadding input is false', () => {
             hostComponent.autoPadding = false;
             fixture.detectChanges();
             const main = fixture.debugElement.query(By.css(mainSelector));
             expect(main.nativeElement.classList.contains(autoPaddingClass)).toBe(false);
         });
 
-        it('should add ngx-panels-header__close--disabled if closeEnabled$ emits false', () => {
+        it('should add ngx-panel-header__close--disabled if closeEnabled$ emits false', () => {
             fixture.detectChanges();
             component.closeEnabled$ = of(false);
             fixture.detectChanges();
@@ -82,7 +82,7 @@ describe('PanelHeaderComponent', () => {
             expect(closeBtn.nativeElement.classList.contains(disabledClass)).toBe(true);
         });
 
-        it('should not add ngx-panels-header__close--disabled if closeEnabled$ emits true', () => {
+        it('should not add ngx-panel-header__close--disabled if closeEnabled$ emits true', () => {
             fixture.detectChanges();
             component.closeEnabled$ = of(true);
             fixture.detectChanges();

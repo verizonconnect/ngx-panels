@@ -3,11 +3,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PanelContainerComponent } from './panel-container.component';
-import { SidePanelFakeService } from '../../../../../test/fakes';
 import { PanelService, IPanelService } from '../../services/panel.service';
 import { PanelRef } from '../../classes/panel-ref.class';
 import { PanelComponent } from '../panel/panel.component';
 import { ComponentRef } from '@angular/core';
+import { PanelFakeService } from 'projects/ngx-panels/src/fakes';
 
 describe('PanelContainerComponent', () => {
     let component: PanelContainerComponent;
@@ -27,7 +27,7 @@ describe('PanelContainerComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [PanelContainerComponent],
-            providers: [{ provide: PanelService, useClass: SidePanelFakeService }]
+            providers: [{ provide: PanelService, useClass: PanelFakeService }]
         }).compileComponents();
     }));
 
