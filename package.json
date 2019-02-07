@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "serve": "ng serve",
+    "serve": "ng serve --port 4300",
     "build": "ng build",
     "build:lib": "ng build ngx-panels",
     "test": "ng test ngx-panels",
