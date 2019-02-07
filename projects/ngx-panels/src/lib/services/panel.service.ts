@@ -6,7 +6,7 @@ import { PanelRef } from '../classes/panel-ref.class';
 import { PanelComponent } from '../components/panel/panel.component';
 import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
 import { PanelStatusService } from './panel-status.service';
-import { ISidePanelComponent } from '../components/panel/panel.interface';
+import { IPanelComponent } from '../components/panel/panel.interface';
 
 export interface IPanelService {
     setContainer(panelContainer: PanelContainerComponent);
@@ -53,7 +53,7 @@ export class PanelService implements IPanelService {
         return panelRef;
     }
 
-    private appendPanel<Panel extends ISidePanelComponent, Content, Data>(
+    private appendPanel<Panel extends IPanelComponent, Content, Data>(
         panel: Type<Panel>,
         content: Type<Content>,
         data: Data

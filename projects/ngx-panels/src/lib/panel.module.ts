@@ -7,26 +7,26 @@ import { PanelContainerComponent } from './components/panel-container/panel-cont
 import { PanelComponent } from './components/panel/panel.component';
 import { PanelService } from './services/panel.service';
 import { PanelStatusService } from './services/panel-status.service';
-import { SidePanelHeaderComponent } from './components/panel-header/panel-header.component';
-import { SidePanelBodyComponent } from './components/panel-body/panel-body.component';
-import { SidePanelFooterComponent } from './components/panel-footer/panel-footer.component';
+import { PanelHeaderComponent } from './components/panel-header/panel-header.component';
+import { PanelBodyComponent } from './components/panel-body/panel-body.component';
+import { PanelFooterComponent } from './components/panel-footer/panel-footer.component';
 
 @NgModule({
     imports: [CommonModule],
     declarations: [
         PanelComponent,
         PanelContainerComponent,
-        SidePanelHeaderComponent,
-        SidePanelBodyComponent,
-        SidePanelFooterComponent
+        PanelHeaderComponent,
+        PanelBodyComponent,
+        PanelFooterComponent
     ],
     providers: [PanelService, PanelStatusService],
-    exports: [PanelContainerComponent, SidePanelHeaderComponent, SidePanelBodyComponent, SidePanelFooterComponent]
+    exports: [PanelContainerComponent, PanelHeaderComponent, PanelBodyComponent, PanelFooterComponent]
 })
-export class SidePanelModule {
+export class PanelModule {
     static forRoot(): ModuleWithProviders {
         return {
-            ngModule: SidePanelModule,
+            ngModule: PanelModule,
             providers: [PanelStatusService, PanelService]
         };
     }

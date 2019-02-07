@@ -10,7 +10,7 @@ import {
     ChangeDetectorRef
 } from '@angular/core';
 import { trigger, state, style, transition, animate, AnimationEvent } from '@angular/animations';
-import { ISidePanelComponent } from './panel.interface';
+import { IPanelComponent } from './panel.interface';
 
 const SLIDE_DURATION = 200;
 
@@ -37,7 +37,7 @@ const ANIMATION_VISIBLE = {
         ])
     ]
 })
-export class PanelComponent implements ISidePanelComponent {
+export class PanelComponent implements IPanelComponent {
     @Output()
     panelCloseAnimationEnd: EventEmitter<boolean> = new EventEmitter<boolean>();
 

@@ -5,21 +5,21 @@ import { ComponentRef } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
-import { ISidePanelComponent } from '../components/panel/panel.interface';
+import { IPanelComponent } from '../components/panel/panel.interface';
 
 export interface IPanelRef<Data> {
     readonly closeEnabled$: Observable<boolean>;
     readonly data: Data;
-    readonly panelComponentRef: ComponentRef<ISidePanelComponent>;
+    readonly panelComponentRef: ComponentRef<IPanelComponent>;
     onBeforeClose: () => boolean;
-    setComponents(panelComponentRef: ComponentRef<ISidePanelComponent>, panelContainer: PanelContainerComponent);
+    setComponents(panelComponentRef: ComponentRef<IPanelComponent>, panelContainer: PanelContainerComponent);
     enableClose(canClose: boolean);
     close();
     setData(data: Data);
 }
 
 export class PanelRef<Data> implements IPanelRef<Data> {
-    private panelCmpRef: ComponentRef<ISidePanelComponent>;
+    private panelCmpRef: ComponentRef<IPanelComponent>;
     private panelContainer: PanelContainerComponent;
     private panelData: Data;
 
@@ -27,7 +27,7 @@ export class PanelRef<Data> implements IPanelRef<Data> {
 
     onBeforeClose = () => true;
 
-    setComponents(panelComponentRef: ComponentRef<ISidePanelComponent>, panelContainer: PanelContainerComponent) {
+    setComponents(panelComponentRef: ComponentRef<IPanelComponent>, panelContainer: PanelContainerComponent) {
         this.panelCmpRef = panelComponentRef;
         this.panelContainer = panelContainer;
     }
@@ -57,7 +57,7 @@ export class PanelRef<Data> implements IPanelRef<Data> {
         return this.panelData;
     }
 
-    get panelComponentRef(): ComponentRef<ISidePanelComponent> {
+    get panelComponentRef(): ComponentRef<IPanelComponent> {
         return this.panelCmpRef;
     }
 }

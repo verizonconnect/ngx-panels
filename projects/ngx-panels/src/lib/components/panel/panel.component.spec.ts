@@ -7,7 +7,7 @@ import { By } from '@angular/platform-browser';
 
 import { PanelComponent, CLOSED, OPEN } from './panel.component';
 
-describe('SidePanelComponent', () => {
+describe('PanelComponent', () => {
     let component: PanelComponent;
     let fixture: ComponentFixture<PanelComponent>;
 

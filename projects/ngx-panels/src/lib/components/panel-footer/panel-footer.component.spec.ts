@@ -4,7 +4,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-import { SidePanelFooterComponent } from './panel-footer.component';
+import { PanelFooterComponent } from './panel-footer.component';
 
 @Component({
     selector: 'ngx-panel-footer-host',
@@ -16,13 +16,13 @@ class HostComponent {
     autoPadding = true;
 }
 
-describe('SidePanelFooterComponent', () => {
+describe('PanelFooterComponent', () => {
     let hostComponent: HostComponent;
     let fixture: ComponentFixture<HostComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HostComponent, SidePanelFooterComponent]
+            declarations: [HostComponent, PanelFooterComponent]
         }).compileComponents();
     }));
 

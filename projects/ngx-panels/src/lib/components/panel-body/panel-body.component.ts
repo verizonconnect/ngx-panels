@@ -8,7 +8,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
     styleUrls: ['./panel-body.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SidePanelBodyComponent {
+export class PanelBodyComponent {
     @Input()
     autoPadding = true;
 }

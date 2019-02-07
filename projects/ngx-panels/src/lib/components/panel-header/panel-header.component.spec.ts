@@ -4,13 +4,13 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-import { SidePanelHeaderComponent } from './panel-header.component';
+import { PanelHeaderComponent } from './panel-header.component';
 import { PanelRefFake } from '../../../../../test/fakes';
 import { PanelRef } from '../../classes/panel-ref.class';
 import { of } from 'rxjs';
 
 @Component({
-    selector: 'ngx-panels-header-host',
+    selector: 'ngx-panel-header-host',
     template: `<ngx-panels-header [autoPadding]="autoPadding">
         <div class="transcluded"></div>
     </ngx-panels-header>`
@@ -19,15 +19,15 @@ class HostComponent {
     autoPadding = true;
 }
 
-describe('SidePanelHeaderComponent', () => {
+describe('PanelHeaderComponent', () => {
     let hostComponent: HostComponent;
-    let component: SidePanelHeaderComponent;
+    let component: PanelHeaderComponent;
     let fixture: ComponentFixture<HostComponent>;
     let panelRef: PanelRef<any>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HostComponent, SidePanelHeaderComponent],
+            declarations: [HostComponent, PanelHeaderComponent],
             providers: [{ provide: PanelRef, useClass: PanelRefFake }]
         }).compileComponents();
     }));
@@ -35,7 +35,7 @@ describe('SidePanelHeaderComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(HostComponent);
         hostComponent = fixture.componentInstance;
-        component = fixture.debugElement.query(By.directive(SidePanelHeaderComponent)).componentInstance;
+        component = fixture.debugElement.query(By.directive(PanelHeaderComponent)).componentInstance;
         panelRef = TestBed.get(PanelRef);
     });
 

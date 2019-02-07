@@ -11,7 +11,7 @@ import { PanelRef } from '../../classes/panel-ref.class';
     templateUrl: './panel-header.component.html',
     styleUrls: ['./panel-header.component.scss']
 })
-export class SidePanelHeaderComponent implements OnInit {
+export class PanelHeaderComponent implements OnInit {
     @Input()
     autoPadding = true;
 

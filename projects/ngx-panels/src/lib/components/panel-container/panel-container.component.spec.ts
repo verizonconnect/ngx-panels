@@ -9,7 +9,7 @@ import { PanelRef } from '../../classes/panel-ref.class';
 import { PanelComponent } from '../panel/panel.component';
 import { ComponentRef } from '@angular/core';
 
-describe('SidePanelContainerComponent', () => {
+describe('PanelContainerComponent', () => {
     let component: PanelContainerComponent;
     let fixture: ComponentFixture<PanelContainerComponent>;
     let panelService: IPanelService;

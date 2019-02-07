@@ -20,9 +20,9 @@ class ContentFakeComponent {}
 })
 class TestModule {}
 
-describe('SidePanelService', () => {
+describe('PanelService', () => {
     let service: PanelService;
-    let sidePanelStatusService: SidePanelStatusFakeService;
+    let panelStatusService: SidePanelStatusFakeService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -31,7 +31,7 @@ describe('SidePanelService', () => {
         });
 
         service = TestBed.get(PanelService);
-        sidePanelStatusService = TestBed.get(PanelStatusService);
+        panelStatusService = TestBed.get(PanelStatusService);
     });
 
     describe('setContainer', () => {
@@ -43,10 +43,10 @@ describe('SidePanelService', () => {
     });
 
     describe('closeAll', () => {
-        it('should call reset method of SidePanelStatusService', () => {
+        it('should call reset method of PanelStatusService', () => {
             service.setContainer({ destroyAll: () => {} } as PanelContainerComponent);
             service.closeAll();
-            expect(sidePanelStatusService.reset).toHaveBeenCalled();
+            expect(panelStatusService.reset).toHaveBeenCalled();
         });
 
         it('should call destroyAll method of container', () => {
@@ -66,9 +66,9 @@ describe('SidePanelService', () => {
             appendPanelSpy = spyOn<any>(service, 'appendPanel').and.returnValue(panelRef);
         });
 
-        it('should call increment method of SidePanelStatusService', () => {
+        it('should call increment method of PanelStatusService', () => {
             service.open(ContentFakeComponent);
-            expect(sidePanelStatusService.increment).toHaveBeenCalled();
+            expect(panelStatusService.increment).toHaveBeenCalled();
         });
 
         it('should call appendPanel method', () => {
@@ -80,16 +80,16 @@ describe('SidePanelService', () => {
             expect(service.open(ContentFakeComponent)).toBe(panelRef);
         });
 
-        it('should call notifyOpen method of SidePanelStatusService if no panel is open', () => {
-            sidePanelStatusService.setIsOpen(false);
+        it('should call notifyOpen method of PanelStatusService if no panel is open', () => {
+            panelStatusService.setIsOpen(false);
             service.open(ContentFakeComponent);
-            expect(sidePanelStatusService.notifyOpen).toHaveBeenCalled();
+            expect(panelStatusService.notifyOpen).toHaveBeenCalled();
         });
 
-        it('should not call notifyOpen method of SidePanelStatusService if a panel is already open', () => {
-            sidePanelStatusService.setIsOpen(true);
+        it('should not call notifyOpen method of PanelStatusService if a panel is already open', () => {
+            panelStatusService.setIsOpen(true);
             service.open(ContentFakeComponent);
-            expect(sidePanelStatusService.notifyOpen).not.toHaveBeenCalled();
+            expect(panelStatusService.notifyOpen).not.toHaveBeenCalled();
         });
     });
 
@@ -107,9 +107,9 @@ describe('SidePanelService', () => {
             expect(closeAllSpy).toHaveBeenCalled();
         });
 
-        it('should call reset method before increment method of SidePanelStatusService', () => {
+        it('should call reset method before increment method of PanelStatusService', () => {
             service.openAsRoot(ContentFakeComponent);
-            expect(sidePanelStatusService.reset).toHaveBeenCalledBefore(sidePanelStatusService.increment);
+            expect(panelStatusService.reset).toHaveBeenCalledBefore(panelStatusService.increment);
         });
 
         it('should call appendPanel method', () => {
@@ -121,9 +121,9 @@ describe('SidePanelService', () => {
             expect(service.openAsRoot(ContentFakeComponent)).toBe(panelRef);
         });
 
-        it('should call notifyOpen method of SidePanelStatusService', () => {
+        it('should call notifyOpen method of PanelStatusService', () => {
             service.openAsRoot(ContentFakeComponent);
-            expect(sidePanelStatusService.notifyOpen).toHaveBeenCalled();
+            expect(panelStatusService.notifyOpen).toHaveBeenCalled();
         });
     });
 

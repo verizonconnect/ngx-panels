@@ -1,15 +1,15 @@
 // Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
 
-import { SidePanelModule } from './panel.module';
+import { PanelModule } from './panel.module';
 
-describe('SidePanelModule', () => {
-    let sidePanelModule: SidePanelModule;
+describe('PanelModule', () => {
+    let panelModule: PanelModule;
 
     beforeEach(() => {
-        sidePanelModule = new SidePanelModule();
+        panelModule = new PanelModule();
     });
 
     it('should create an instance', () => {
-        expect(sidePanelModule).toBeTruthy();
+        expect(panelModule).toBeTruthy();
     });
 });

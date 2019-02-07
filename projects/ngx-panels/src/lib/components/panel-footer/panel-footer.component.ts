@@ -8,7 +8,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
     styleUrls: ['./panel-footer.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SidePanelFooterComponent {
+export class PanelFooterComponent {
     @Input()
     autoPadding = true;
 }

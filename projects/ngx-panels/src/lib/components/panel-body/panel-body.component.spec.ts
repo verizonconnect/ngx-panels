@@ -4,7 +4,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Component } from '@angular/core';
 
-import { SidePanelBodyComponent } from './panel-body.component';
+import { PanelBodyComponent } from './panel-body.component';
 
 @Component({
     selector: 'ngx-panel-body-host',
@@ -16,13 +16,13 @@ class HostComponent {
     autoPadding = true;
 }
 
-describe('SidePanelBodyComponent', () => {
+describe('PanelBodyComponent', () => {
     let hostComponent: HostComponent;
     let fixture: ComponentFixture<HostComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HostComponent, SidePanelBodyComponent]
+            declarations: [HostComponent, PanelBodyComponent]
         }).compileComponents();
     }));
 
