@@ -1,4 +1,4 @@
-# ngx-panels
+# Angular Library Panel (ngx-panels)
 ### An Angular library for creating beautiful, dynamic side panels
 
 ## Demo
