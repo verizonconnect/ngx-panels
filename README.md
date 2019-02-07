@@ -4,6 +4,31 @@
 ## Demo
 
 ## Usage
+`app.component.html`
+```html
+<button (click)="open()">Open Panel</button>
+<ngx-panel-container></ngx-panel-container>
+```
+
+`app.component.ts`
+```typescript
+import { Component } from '@angular/core';
+import { PanelService } from 'projects/ngx-panels/src/lib';
+import { TestComponent } from './test/test.component';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'
+})
+export class AppComponent {
+    constructor(private readonly panelService: PanelService) { }
+
+    open() {
+        this.panelService.openAsRoot(TestComponent);
+    }
+}
+
+```
 
 ## API
 
