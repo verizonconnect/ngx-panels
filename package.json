@@ -6,7 +6,7 @@
     "serve": "ng serve",
     "build": "ng build",
     "build:lib": "ng build ngx-panels",
-    "test": "ng test",
+    "test": "ng test ngx-panels",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
