@@ -13,7 +13,7 @@
 `app.component.ts`
 ```typescript
 import { Component } from '@angular/core';
-import { PanelService } from 'projects/ngx-panels/src/lib';
+import { PanelService } from 'ngx-panels';
 import { TestComponent } from './test/test.component';
 
 @Component({
