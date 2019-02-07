@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'ngx-panel-ngx-panels',
   template: `
     <p>
-      ngx-panels works!
+      ngx-panels works better!
     </p>
   `,
   styles: []
