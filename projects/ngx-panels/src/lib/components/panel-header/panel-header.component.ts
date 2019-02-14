@@ -1,10 +1,9 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
-import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { PanelRef } from '../../classes/panel-ref.class';
+
+
 
 @Component({
     selector: 'ngx-panel-header',

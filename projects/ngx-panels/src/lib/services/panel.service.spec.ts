@@ -1,13 +1,13 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
+import { Component, NgModule } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
-import { PanelService } from './panel.service';
-import { PanelStatusService } from './panel-status.service';
-import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
-import { Component, NgModule } from '@angular/core';
-import { PanelRef } from '../classes/panel-ref.class';
 import { PanelFakeComponent, PanelStatusFakeService } from '../../fakes';
+import { PanelRef } from '../classes/panel-ref.class';
+import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
+import { PanelStatusService } from './panel-status.service';
+import { PanelService } from './panel.service';
+
+
 
 @Component({
     template: '<div><div>'

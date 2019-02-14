@@ -1,6 +1,6 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+
 
 @Component({
     selector: 'ngx-panel-footer',

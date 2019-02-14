@@ -1,10 +1,10 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
-import { Component, ViewContainerRef, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 import { PanelRef } from '../../classes/panel-ref.class';
 import { Stack } from '../../classes/stack.class';
 import { PanelService } from '../../services/panel.service';
+
+
 
 @Component({
     selector: 'ngx-panel-container',

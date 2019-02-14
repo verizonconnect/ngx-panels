@@ -1,5 +1,3 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
 export * from './panel-container-fake.component';
 export * from './panel-fake.component';
 export * from './panel-header-fake.component';

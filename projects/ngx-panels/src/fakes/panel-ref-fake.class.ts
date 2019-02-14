@@ -1,9 +1,9 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
 import { ComponentRef } from '@angular/core';
-
 import { Observable } from 'rxjs';
+
 import { IPanelRef } from '../lib';
+
+
 
 export class PanelRefFake<Data> implements IPanelRef<Data> {
     readonly closeEnabled$: Observable<boolean>;

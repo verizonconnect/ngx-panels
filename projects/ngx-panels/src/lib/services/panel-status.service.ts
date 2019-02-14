@@ -1,8 +1,7 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
 import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 
-import { Subject, Observable } from 'rxjs';
+
 
 export interface IPanelStatusService {
     isOpen: boolean;

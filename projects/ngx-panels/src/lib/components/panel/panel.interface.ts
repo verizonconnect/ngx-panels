@@ -1,7 +1,7 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
-import { EventEmitter, ViewContainerRef } from '@angular/core';
 import { AnimationEvent } from '@angular/animations';
+import { EventEmitter, ViewContainerRef } from '@angular/core';
+
+
 
 export interface IPanelComponent {
     contentContainer: ViewContainerRef;

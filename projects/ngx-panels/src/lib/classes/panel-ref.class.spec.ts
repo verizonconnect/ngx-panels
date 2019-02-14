@@ -1,7 +1,7 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
-import { PanelRef } from './panel-ref.class';
 import { PanelContainerComponent } from '..';
+import { PanelRef } from './panel-ref.class';
+
+
 
 describe('PanelRef class', () => {
     it('should create', () => {

@@ -1,12 +1,12 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
-import { Injectable, Type, Injector, ComponentFactory, ComponentRef, ComponentFactoryResolver } from '@angular/core';
+import { ComponentFactory, ComponentFactoryResolver, ComponentRef, Injectable, Injector, Type } from '@angular/core';
 
 import { PanelRef } from '../classes/panel-ref.class';
-import { PanelComponent } from '../components/panel/panel.component';
 import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
-import { PanelStatusService } from './panel-status.service';
+import { PanelComponent } from '../components/panel/panel.component';
 import { IPanelComponent } from '../components/panel/panel.interface';
+import { PanelStatusService } from './panel-status.service';
+
+
 
 export interface IPanelService {
     setContainer(panelContainer: PanelContainerComponent);

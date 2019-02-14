@@ -1,16 +1,17 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
+import { animate, AnimationEvent, state, style, transition, trigger } from '@angular/animations';
 import {
-    Component,
-    Output,
-    EventEmitter,
-    ViewContainerRef,
-    ViewChild,
     ChangeDetectionStrategy,
-    ChangeDetectorRef
+    ChangeDetectorRef,
+    Component,
+    EventEmitter,
+    Output,
+    ViewChild,
+    ViewContainerRef,
 } from '@angular/core';
-import { trigger, state, style, transition, animate, AnimationEvent } from '@angular/animations';
+
 import { IPanelComponent } from './panel.interface';
+
+
 
 const SLIDE_DURATION = 200;
 

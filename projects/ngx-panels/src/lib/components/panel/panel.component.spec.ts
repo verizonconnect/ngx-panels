@@ -1,11 +1,11 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimationEvent } from '@angular/animations';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { PanelComponent, CLOSED, OPEN } from './panel.component';
+import { CLOSED, OPEN, PanelComponent } from './panel.component';
+
+
 
 describe('PanelComponent', () => {
     let component: PanelComponent;

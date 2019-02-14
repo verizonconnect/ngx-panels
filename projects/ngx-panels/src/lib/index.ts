@@ -1,4 +1,4 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
+
 
 export * from './panel.module';
 export * from './services/panel-status.service';

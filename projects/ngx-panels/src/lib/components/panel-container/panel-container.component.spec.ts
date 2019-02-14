@@ -1,13 +1,13 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PanelContainerComponent } from './panel-container.component';
-import { PanelService, IPanelService } from '../../services/panel.service';
-import { PanelRef } from '../../classes/panel-ref.class';
-import { PanelComponent } from '../panel/panel.component';
 import { ComponentRef } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PanelFakeService } from 'projects/ngx-panels/src/fakes';
+
+import { PanelRef } from '../../classes/panel-ref.class';
+import { IPanelService, PanelService } from '../../services/panel.service';
+import { PanelComponent } from '../panel/panel.component';
+import { PanelContainerComponent } from './panel-container.component';
+
+
 
 describe('PanelContainerComponent', () => {
     let component: PanelContainerComponent;

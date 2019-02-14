@@ -1,6 +1,7 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
 import { Component, EventEmitter } from '@angular/core';
+
 import { IPanelComponent } from '../lib/components/panel/panel.interface';
+
 
 @Component({
     selector: 'ngx-panel',

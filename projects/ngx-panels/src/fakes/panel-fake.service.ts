@@ -1,6 +1,6 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
+import { IPanelService } from '../lib';
 
-import { IPanelService } from "../lib";
+
 
 export class PanelFakeService implements IPanelService {
     setContainer: jasmine.Spy = jasmine.createSpy('setContainer');

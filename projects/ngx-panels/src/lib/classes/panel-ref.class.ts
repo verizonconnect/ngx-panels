@@ -1,11 +1,10 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
 import { ComponentRef } from '@angular/core';
-
 import { BehaviorSubject, Observable } from 'rxjs';
 
 import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
 import { IPanelComponent } from '../components/panel/panel.interface';
+
+
 
 export interface IPanelRef<Data> {
     readonly closeEnabled$: Observable<boolean>;

@@ -1,4 +1,3 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
 import { NgModule } from '@angular/core';
 
 import { PanelBodyFakeComponent } from './panel-body-fake.component';
@@ -8,6 +7,7 @@ import { PanelFakeService } from './panel-fake.service';
 import { PanelFooterFakeComponent } from './panel-footer-fake.component';
 import { PanelHeaderFakeComponent } from './panel-header-fake.component';
 import { PanelStatusFakeService } from './panel-status-fake.service';
+
 
 const EXPORTS = [
     PanelFakeComponent,

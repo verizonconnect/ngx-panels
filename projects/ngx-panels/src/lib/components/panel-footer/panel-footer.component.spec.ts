@@ -1,10 +1,10 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { PanelFooterComponent } from './panel-footer.component';
+
+
 
 @Component({
     selector: 'ngx-panel-footer-host',

@@ -1,8 +1,8 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
-
 import { TestBed } from '@angular/core/testing';
 
 import { PanelStatusService as PanelStatusService } from './panel-status.service';
+
+
 
 describe('PanelStatusService', () => {
     let service: PanelStatusService;

@@ -1,4 +1,4 @@
-// Copyright © 2018. Verizon Connect Ireland Limited. All rights reserved.
+
 
 export class Stack<T> {
     private elements: T[] = [];
