@@ -1,5 +1,6 @@
 # How to start the project
 If you want to start the demo project that uses the library, perform the following steps
+
 ```npm install```
 
 ```npm run serve```
