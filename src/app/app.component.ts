@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PanelService } from 'projects/ngx-panels/src/lib';
 
-import { Hero } from './models/hero.model';
+import { Robot } from './models/robot.model';
 import { TestComponent } from './test/test.component';
 
 @Component({
@@ -10,17 +10,19 @@ import { TestComponent } from './test/test.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  robots: Hero[] = [
-    { id: 1, name: 'Ufo Robot', avatar: '', power: 1, statement: '' },
-    { id: 2, name: 'Zoran Power', avatar: '', power: 1, statement: '' },
-    { id: 3, name: 'Zin Jen', avatar: '', power: 1, statement: '' },
-    { id: 4, name: 'Mortadella', avatar: '', power: 1, statement: '' },
-    { id: 5, name: 'Paolo Bot', avatar: '', power: 1, statement: '' }
+  robots: Robot[] = [
+    { id: 1, name: 'Ufo Robot', avatar: 'https://robohash.org/uforobot', power: 3, statement: '' },
+    { id: 2, name: 'Zoran Power', avatar: 'https://robohash.org/zoranpower', power: 4, statement: '' },
+    { id: 3, name: 'Zin Jen', avatar: 'https://robohash.org/zinjen', power: 5, statement: '' },
+    { id: 4, name: 'Mortadella', avatar: 'https://robohash.org/mortadella', power: 6, statement: '' },
+    { id: 5, name: 'Paolo Bot', avatar: 'https://robohash.org/paolobot', power: 4, statement: '' }
   ];
 
-  constructor(private readonly panelService: PanelService) {}
+    constructor(
+        private readonly panelService: PanelService
+    ) { }
 
-  open() {
-    this.panelService.openAsRoot(TestComponent);
-  }
+    open(robot: Robot) {
+        this.panelService.openAsRoot(TestComponent, robot);
+    }
 }
