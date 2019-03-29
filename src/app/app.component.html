@@ -1,10 +1,13 @@
 <div class="app-root__container">
-  <div class="app-root__navbar">ngx-panels: Heroes to the rescue!</div>
+  <div class="app-root__navbar">ngx-panels: Robots to the rescue!</div>
   <div class="app-root__body">
-    <div style="text-align:center">
-      <button class="app-root__button" (click)="open()">Hero details</button>
-      <ngx-panel-container></ngx-panel-container>
+    <div class="app-root__robot-list">
+      <div *ngFor="let robot of robots" class="app-root__robot">
+        {{ robot.name }}
+        <button class="app-root__button" (click)="open(robot.id)">Details</button>
+      </div>
     </div>
   </div>
   <div class="app-root__footer"></div>
 </div>
+<ngx-panel-container></ngx-panel-container>
