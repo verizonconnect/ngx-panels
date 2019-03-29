@@ -17,14 +17,13 @@
 .header {
     font-weight: bold;
     font-size: 20px;
-    background: #26547C;
-    color: white;
+    background: #E0FF4F;
 }
 
 .footer {
     display: flex;
     justify-content: center;
-    background: #26547C;
+    background: #E0FF4F;
 }
 
 .title {
@@ -46,7 +45,8 @@
 }
 
 .button {
-    background: #E0FF4F;
+    background: #26547C;
+    color: white;
     border: none;
     border-radius: 4px;
     padding: 8px;
