@@ -15,7 +15,7 @@
     justify-content: center;
     padding: 10px;
     height: 60px;
-    background-color: green;
+    background-color: #26547C;
     color: white;
     font-size: 24px;
   }
@@ -24,10 +24,10 @@
     cursor: pointer;
     padding: 5px;
     background-color: white;
-    border: 1px solid green;
+    border: 1px solid #26547C;
   }
   &__robot-list{
-      border: 1px solid green;
+      border: 1px solid #26547C;
       padding: 20px;
       width: 200px;
       display: flex;
@@ -37,9 +37,17 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      padding: 5px;
   }
   &__footer {
     height: 25px;
-    background-color: green;
+    background-color: #26547C;
+  }
+  &__icon{
+      width: 20px;
+  }
+  &__title {
+    padding: 5px 0;
+    font-weight: bold;
   }
 }
