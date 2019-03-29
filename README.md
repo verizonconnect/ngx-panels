@@ -1,4 +1,4 @@
-# Angular Library Panel (ngx-panels)
+# Angular Panel Library (ngx-panels)
 ### An [Angular](https://angular.io/) library for creating beautiful, dynamic panels
 
 ### Demo
