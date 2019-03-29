@@ -46,7 +46,17 @@
   &__icon{
       width: 20px;
   }
-  &__title {
+  &__angular-logo{
+    width: 48px;
+    margin-right: 8px;
+  }
+  &__title{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  &__list-title {
     padding: 5px 0;
     font-weight: bold;
   }
