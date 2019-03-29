@@ -1,10 +1,15 @@
-# Angular Library Panel (ngx-panels)
-### An Angular library for creating beautiful, dynamic panels
+# Angular Panel Library (ngx-panels)
+### An [Angular](https://angular.io/) library for creating beautiful, dynamic panels
 
-## Demo
+### Demo
 A demo will be available soon.
 
-## Quick start
+## Install
+An npm package will be available soon. Right now you can download the repo and import the folder in your project.
+
+## Usage
+
+### Quick start
 Import `PanelModule`.
 As extra steps you need to import `BrowserAnimationsModule` and define the entryComponents: `PanelComponent`, `PanelContainerComponent` from the library and any components that will be hosted inside the panels, such as `SampleComponent` in this example.
 
@@ -42,7 +47,7 @@ export class AppComponent {
 }
 ```
 
-## Stacking panels
+### Stacking panels
 You can either open a panel on top of the previously opened ones (if any), stacking them
 ```typescript
     this.panelService.open(SampleComponent);
@@ -56,7 +61,7 @@ or you can open one replacing all the others, as "root"
     this.panelService.openAsRoot(SampleComponent);
 ```
 
-## Panel content
+### Panel content
 You can prepare any Angular Component to fill the panel content, but there are some sub-components that you can conveniently use to construct the panel.
 ```html
 <ngx-panel-header> Angular HTML content for header </ngx-panel-header>
@@ -65,7 +70,7 @@ You can prepare any Angular Component to fill the panel content, but there are s
 ```
 The header component already provides a close button.
 
-## Programmatically close a panel
+### Programmatically close a panel
 Inside the hosted component you can access the panel reference `PanelRef`, that can be used to close and perform other actions programmatically.
 ```typescript
 // ...
@@ -79,7 +84,7 @@ export class SampleComponent {
 }
 ```
 
-## Set initial data
+### Set initial data
 When you open a panel you can send custom data that can be used as initial seed for the panel content.
 ```typescript
     this.panelService.open(SampleComponent, 'Hello world'); // openAsRoot offers the same possibility
