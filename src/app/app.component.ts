@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PanelService } from 'projects/ngx-panels/src/lib';
+
 import { TestComponent } from './test/test.component';
 
 
@@ -11,7 +12,7 @@ export class Robot {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
