@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { PanelService } from 'projects/ngx-panels/src/lib';
 
+import { Robot } from './models/robot.model';
 import { TestComponent } from './test/test.component';
-
-
-export class Robot {
-    name: string;
-    avatar: string;
-}
 
 @Component({
   selector: 'app-root',
@@ -15,17 +10,19 @@ export class Robot {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  robots: Robot[] = [
+    { id: 1, name: 'Ufo Robot', avatar: 'https://robohash.org/uforobot', power: 3, statement: '' },
+    { id: 2, name: 'Zoran Power', avatar: 'https://robohash.org/zoranpower', power: 4, statement: '' },
+    { id: 3, name: 'Zin Jen', avatar: 'https://robohash.org/zinjen', power: 5, statement: '' },
+    { id: 4, name: 'Mortadella', avatar: 'https://robohash.org/mortadella', power: 6, statement: '' },
+    { id: 5, name: 'Paolo Bot', avatar: 'https://robohash.org/paolobot', power: 4, statement: '' }
+  ];
 
     constructor(
         private readonly panelService: PanelService
     ) { }
 
-    open() {
-        this.panelService.openAsRoot(TestComponent, {
-            name: 'Giovanni Pini',
-            avatar: 'https://robohash.org/giovannipini',
-            power: 4
-        });
+    open(robot: Robot) {
+        this.panelService.openAsRoot(TestComponent, robot);
     }
-
 }

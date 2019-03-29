@@ -1,9 +1,9 @@
 <div class="main">
-    <ngx-panel-header>
-        <div class="header">Robot Details</div>
+    <ngx-panel-header class="header">
+        <div>Robot Details</div>
     </ngx-panel-header>
     <ngx-panel-body>
-        <div>
+        <div class="holder">
             <div class="title">Robot</div>
             <img class="avatar" [src]="avatar" alt="{{name}}">
             <div class="name">{{name}}</div>
@@ -17,8 +17,8 @@
             <button class="button" (click)="onSpeak()">Say something</button>
         </div>
     </ngx-panel-body>
-    <ngx-panel-footer>
-        <div class="footer">
+    <ngx-panel-footer class="footer">
+        <div>
             <button class="button" (click)="onClick()">Close me!</button>
         </div>
     </ngx-panel-footer>
