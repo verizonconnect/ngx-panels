@@ -11,11 +11,10 @@
   }
   &__navbar {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     padding: 10px;
     height: 60px;
-    background-color: #26547C;
+    background-color: #26547c;
     color: white;
     font-size: 24px;
   }
@@ -24,40 +23,40 @@
     cursor: pointer;
     padding: 5px;
     background-color: white;
-    border: 1px solid #26547C;
+    border: 1px solid #26547c;
   }
-  &__robot-list{
-      border: 1px solid #26547C;
-      padding: 20px;
-      width: 200px;
-      display: flex;
-      flex-direction: column;
+  &__robot-list {
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
   }
-  &__robot{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 5px;
+  &__robot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
   }
   &__footer {
     height: 25px;
-    background-color: #26547C;
+    background-color: #26547c;
   }
-  &__icon{
-      width: 20px;
+  &__icon {
+    width: 20px;
   }
-  &__angular-logo{
+  &__angular-logo {
     width: 48px;
     margin-right: 8px;
   }
-  &__title{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   &__list-title {
-    padding: 5px 0;
+    font-size: 24px;
+    padding: 5px 20px;
     font-weight: bold;
   }
 }
