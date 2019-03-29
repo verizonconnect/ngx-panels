@@ -15,7 +15,7 @@ export class AppComponent {
     { id: 2, name: 'Zoran Power', avatar: 'https://robohash.org/zoranpower', power: 4, statement: '' },
     { id: 3, name: 'Zin Jen', avatar: 'https://robohash.org/zinjen', power: 5, statement: '' },
     { id: 4, name: 'Mortadella', avatar: 'https://robohash.org/mortadella', power: 6, statement: '' },
-    { id: 5, name: 'Paolo Bot', avatar: 'https://robohash.org/paolobot', power: 4, statement: '' }
+    { id: 5, name: 'Paolo Bot', avatar: 'https://robohash.org/paolobot', power: 9, statement: '' }
   ];
 
     constructor(
