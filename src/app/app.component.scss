@@ -7,6 +7,7 @@
   }
   &__body {
     height: 100%;
+    padding: 30px;
   }
   &__navbar {
     display: flex;
@@ -26,7 +27,16 @@
     border: 1px solid green;
   }
   &__robot-list{
-      
+      border: 1px solid green;
+      padding: 20px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+  }
+  &__robot{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
   }
   &__footer {
     height: 25px;
