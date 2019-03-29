@@ -1,7 +1,12 @@
 <div class="app-root__container">
-  <div class="app-root__navbar">ngx-panels: Robots to the rescue!</div>
+  <div class="app-root__navbar">
+    <div class="app-root__title">
+      <img class="app-root__angular-logo" src="../assets/angular.svg" />
+      <div>ngx-panels: Panel bots to the rescue!</div>
+    </div>
+  </div>
   <div class="app-root__body">
-    <div class="app-root__title">Robots</div>
+    <div class="app-root__list-title">Robots</div>
     <div class="app-root__robot-list">
       <div *ngFor="let robot of robots" class="app-root__robot">
         <div>
@@ -15,6 +20,5 @@
       </div>
     </div>
   </div>
-  <div class="app-root__footer"></div>
 </div>
 <ngx-panel-container></ngx-panel-container>
