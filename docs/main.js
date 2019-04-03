@@ -448,7 +448,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-var SLIDE_DURATION = 30000;
+var SLIDE_DURATION = 200;
 var OPEN = 'open';
 var CLOSED = 'closed';
 var ANIMATION_HIDDEN = {
@@ -864,7 +864,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app-root__container\">\n  <div class=\"app-root__navbar\">\n    <div class=\"app-root__title\">\n      <img class=\"app-root__angular-logo\" src=\"../assets/angular.svg\" />\n      <div>ngx-panels: Panel bots to the rescue!</div>\n    </div>\n  </div>\n  <div class=\"app-root__body\">\n    <div class=\"app-root__list-title\">Robots</div>\n    <div class=\"app-root__robot-list\">\n      <div *ngFor=\"let robot of robots\" class=\"app-root__robot\">\n        <div>\n          <img class=\"app-root__icon\" src=\"../assets/robot.svg\" />\n          {{ robot.name }}\n        </div>\n\n        <button class=\"app-root__button\" (click)=\"open(robot)\">\n          Details\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n<ngx-panel-container></ngx-panel-container>\n"
+module.exports = "<div class=\"app-root__container\">\n  <div class=\"app-root__navbar\">\n    <div class=\"app-root__title\">\n      <img class=\"app-root__angular-logo\" src=\"assets/angular.svg\" />\n      <div>ngx-panels: Panel bots to the rescue!</div>\n    </div>\n  </div>\n  <div class=\"app-root__body\">\n    <div class=\"app-root__list-title\">Robots</div>\n    <div class=\"app-root__robot-list\">\n      <div *ngFor=\"let robot of robots\" class=\"app-root__robot\">\n        <div>\n          <img class=\"app-root__icon\" src=\"assets/robot.svg\" />\n          {{ robot.name }}\n        </div>\n\n        <button class=\"app-root__button\" (click)=\"open(robot)\">\n          Details\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n<ngx-panel-container></ngx-panel-container>\n"
 
 /***/ }),
 
