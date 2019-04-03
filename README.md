@@ -2,7 +2,9 @@
 ### An [Angular](https://angular.io/) library for creating beautiful, dynamic panels
 
 ### Demo
-A demo will be available soon.
+Try out the [DEMO](http://ngx-panels.surge.sh)!
+
+![alt text](https://github.com/verizonconnect/ngx-panels/blob/master/docs/panel-demo.gif)
 
 ## Install
 An npm package will be available soon. Right now you can download the repo and import the folder in your project.
