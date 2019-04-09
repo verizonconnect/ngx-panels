@@ -6,7 +6,7 @@ import {
     EventEmitter,
     Output,
     ViewChild,
-    ViewContainerRef,
+    ViewContainerRef
 } from '@angular/core';
 
 import { IPanelComponent } from './panel.interface';
