@@ -1,3 +1,5 @@
+@import '../styles/utils';
+
 .app-root {
   &__container {
     display: flex;
@@ -14,22 +16,25 @@
     flex-direction: row;
     padding: 10px;
     height: 60px;
-    background-color: #26547c;
-    color: white;
-    font-size: 24px;
+    background-color: $blue;
+    color: $white;
+    font-size: 1.8rem;
   }
   &__button {
     padding-top: 20px;
     cursor: pointer;
     padding: 5px;
-    background-color: white;
-    border: 1px solid #26547c;
+    background-color: $white;
+    border: 1px solid $blue;
   }
   &__robot-list {
     padding: 20px;
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
+  }
+  &__robot-name {
+    font-size: 1.5rem;
   }
   &__robot {
     display: flex;
@@ -39,7 +44,7 @@
   }
   &__footer {
     height: 25px;
-    background-color: #26547c;
+    background-color: $blue;
   }
   &__icon {
     width: 20px;
@@ -55,7 +60,7 @@
     align-items: center;
   }
   &__list-title {
-    font-size: 24px;
+    font-size: 1.8rem;
     padding: 5px 20px;
     font-weight: bold;
   }

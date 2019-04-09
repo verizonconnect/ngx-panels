@@ -1,6 +1,4 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
+@import '../../styles/utils';
 
 .main {
     height: 100%;
@@ -16,12 +14,12 @@
 
 .header {
     font-weight: bold;
-    font-size: 20px;
-    background: #E0FF4F;
+    font-size: 1.6rem;
+    background: $yellow;
 }
 
 .footer {
-    background: #E0FF4F;
+    background: $yellow;
 }
 
 .footer-bar {
@@ -30,13 +28,13 @@
 }
 
 .title {
-    font-size: 20px;
+    font-size: 1.6rem;
     margin-bottom: 16px;
 }
 
 .avatar {
     border-radius: 50%;
-    border: 1px solid #ccc;
+    border: 1px solid $grey;
     width: 200px;
     height: 200px;
 }
@@ -44,20 +42,11 @@
 .name {
     padding: 8px 0 32px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.6rem;
 }
 
 .button {
-    background: #26547C;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 8px;
-    font-weight: bold;
-    text-transform: uppercase;
-    &:hover {
-        cursor: pointer;
-    }
+    @include button();
 }
 
 .power-bar {

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { PanelService } from 'projects/ngx-panels/src/lib';
 
 import { Robot } from './models/robot.model';
-import { TestComponent } from './test/test.component';
+import { RobotPanelComponent } from './robot-panel/robot-panel.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +23,6 @@ export class AppComponent {
     ) { }
 
     open(robot: Robot) {
-        this.panelService.openAsRoot(TestComponent, robot);
+        this.panelService.openAsRoot(RobotPanelComponent, robot);
     }
 }
