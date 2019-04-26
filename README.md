@@ -17,16 +17,16 @@ npm install @verizon/ngx-panels
 ## Usage
 
 ### Quick start
-Import `PanelModule`.
-As extra steps you need to import `BrowserAnimationsModule` and define the entryComponents: `PanelComponent`, `PanelContainerComponent` from the library and any components that will be hosted inside the panels, such as `SampleComponent` in this example.
+Import `PanelModule.forRoot()` in the module that hosts the panel container. Every other module con import it with just `PanelModule` (without `forRoot` call).
+As extra steps you need to import `BrowserAnimationsModule` and define as entryComponents any components that will be hosted inside the panels, such as `SampleComponent` in this example.
 
 `app.module.ts`
 ```typescript
 @NgModule({
     declarations: [AppComponent, SampleComponent],
-    imports: [BrowserModule, PanelModule, BrowserAnimationsModule],
+    imports: [BrowserModule, BrowserAnimationsModule, PanelModule.forRoot()],
     providers: [],
-    entryComponents: [SampleComponent, PanelComponent, PanelContainerComponent],
+    entryComponents: [SampleComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
@@ -39,6 +39,8 @@ In the HTML just use `ngx-panel-container` element. This will be the holder of a
 <!-- your app -->
 <ngx-panel-container></ngx-panel-container>
 ```
+
+You should place this container inside an HTML element which has `position: relative` and `overflow: hidden` as CSS contraints.
 
 Whenever you need, open a Panel using the panel service. You can do this in every part of your Angular application by injecting the service.
 

@@ -20,6 +20,7 @@ import { PanelService } from './services/panel.service';
         PanelBodyComponent,
         PanelFooterComponent
     ],
+    entryComponents: [PanelComponent, PanelContainerComponent],
     providers: [PanelService, PanelStatusService],
     exports: [PanelContainerComponent, PanelHeaderComponent, PanelBodyComponent, PanelFooterComponent]
 })
@@ -27,7 +28,7 @@ export class PanelModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: PanelModule,
-            providers: [PanelStatusService, PanelService]
+            providers: [PanelStatusService, PanelService],
         };
     }
 }

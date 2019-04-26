@@ -27,6 +27,9 @@ export class PanelService implements IPanelService {
 
     // this method must not be called manually
     setContainer(panelContainer: PanelContainerComponent) {
+        if (this.panelContainer) {
+            throw Error('You are using two <ngx-panel-containers> inside HTML. Please leave just one.');
+        }
         this.panelContainer = panelContainer;
     }
 
