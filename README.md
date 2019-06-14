@@ -40,7 +40,7 @@ In the HTML just use `ngx-panel-container` element. This will be the holder of a
 <ngx-panel-container></ngx-panel-container>
 ```
 
-You should place this container inside an HTML element which has `position: relative` and `overflow: hidden` as CSS contraints.
+You should place this container inside an HTML element which has some space in it.
 
 Whenever you need, open a Panel using the panel service. You can do this in every part of your Angular application by injecting the service.
 

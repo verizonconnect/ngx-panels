@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 
 import { PanelRef } from '../../classes/panel-ref.class';
 import { Stack } from '../../classes/stack.class';
 import { PanelService } from '../../services/panel.service';
+import { isPlatformBrowser } from '@angular/common';
 
 
 
@@ -17,10 +18,24 @@ export class PanelContainerComponent implements OnInit {
     @ViewChild('panelContainer', { read: ViewContainerRef })
     viewContainer: ViewContainerRef;
 
-    constructor(private panelService: PanelService) {}
+    constructor(
+        private panelService: PanelService,
+        private readonly renderer: Renderer2,
+        private readonly elemRef: ElementRef,
+        @Inject(PLATFORM_ID) private platformId: Object
+    ) {}
 
     ngOnInit() {
         this.panelService.setContainer(this);
+        const parent = this.elemRef.nativeElement.parentNode;
+        if (isPlatformBrowser(this.platformId)) {
+            const displayStyle = getComputedStyle(parent).getPropertyValue('display');
+            if (displayStyle === 'inline') {
+                this.renderer.setStyle(parent, 'display', 'inline-block');
+            }
+        }
+        this.renderer.setStyle(parent, 'overflow', 'hidden');
+        this.renderer.setStyle(parent, 'position', 'relative');
     }
 
     startClosingAnimation() {

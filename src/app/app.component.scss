@@ -1,5 +1,11 @@
 @import '../styles/utils';
 
+:host {
+    width: 100%;
+    height: 100%;
+    // display: block;
+}
+
 .app-root {
   &__container {
     display: flex;
