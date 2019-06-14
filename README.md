@@ -4,7 +4,7 @@
 ### An [Angular](https://angular.io/) library for creating beautiful, dynamic panels
 
 ### Demo
-Try out the [DEMO](http://ngx-panels.surge.sh)!
+Try out the [DEMO](https://verizonconnect.github.io/ngx-panels/)!
 
 ![alt text](https://github.com/verizonconnect/ngx-panels/blob/master/docs/panel-demo.gif)
 
