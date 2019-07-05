@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --spec 'cypress/integration/ngx-panels-e2e/**/*'"
+    "cy:run": "./node_modules/.bin/wait-on http://localhost:4300 & cypress run --spec 'cypress/integration/ngx-panels-e2e/**/*'"
   },
   "private": true,
   "dependencies": {

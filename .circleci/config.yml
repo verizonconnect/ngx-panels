@@ -14,5 +14,5 @@ jobs:
             - "node_modules"
       - run: npm run build:lib
       - run: npm run build
-      - run: npm run serve & ./node_modules/.bin/wait-on http://localhost:4300
+      - run: npm run serve
       - run: npm run cy:run
