@@ -8,7 +8,9 @@
     "build:lib": "ng build ngx-panels",
     "test": "ng test ngx-panels",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --spec 'cypress/integration/ngx-panels-e2e/**/*'"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
+    "cypress": "^3.3.2",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },
