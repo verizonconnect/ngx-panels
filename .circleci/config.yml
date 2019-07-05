@@ -12,8 +12,7 @@ jobs:
           key: AngularCircleCI-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - "node_modules"
-      - run: echo "A first hello"
       - run: npm run build:lib
       - run: npm run build
-      - run: npm run serve & ./node_modules/.bin/wait-on http://localhost:8080
+      - run: npm run serve & ./node_modules/.bin/wait-on http://localhost:4300
       - run: npm run cy:run
