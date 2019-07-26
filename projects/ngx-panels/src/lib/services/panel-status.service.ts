@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { PanelConfig } from '../classes/config.class';
 
-
+export const NGX_PANELS_CONFIG = new InjectionToken<PanelConfig>('NGX_PANELS_CONFIG');
 
 export interface IPanelStatusService {
     isOpen: boolean;

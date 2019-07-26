@@ -1,11 +1,10 @@
-import { ComponentFactory, ComponentFactoryResolver, ComponentRef, Injectable, Injector, Type } from '@angular/core';
+import { ComponentFactory, ComponentFactoryResolver, ComponentRef, Injectable, Injector, Type, InjectionToken } from '@angular/core';
 
 import { PanelRef } from '../classes/panel-ref.class';
 import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
 import { PanelComponent } from '../components/panel/panel.component';
 import { IPanelComponent } from '../components/panel/panel.interface';
 import { PanelStatusService } from './panel-status.service';
-
 
 
 export interface IPanelService {

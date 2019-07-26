@@ -4,12 +4,48 @@
 
 .ngx-panel-container {
     &__main {
-        height: 100%;
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
         z-index: 20;
+        
+        &--right {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: auto;
+            height: 100%;
+        }
+
+        &--left {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            height: 100%;
+        }
+
+        &--top {
+            top: 0;
+            right: 0;
+            left: 0;
+            height: auto;
+            width: 100%;
+        }
+
+        &--bottom {
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: auto;
+            width: 100%;
+        }
+
+        &--floating {
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__panels {
@@ -18,8 +54,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: $white;
         display: flex;
         flex-direction: column;
+        z-index: -1;
     }
 }
