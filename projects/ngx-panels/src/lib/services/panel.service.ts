@@ -78,6 +78,7 @@ export class PanelService implements IPanelService {
 
         panelComponentRef.instance.panelCloseAnimationEnd.subscribe(() => {
             this.panelContainer.destroyTopPanel();
+            this.panelStatusService.decrement();
         });
 
         if (data) {

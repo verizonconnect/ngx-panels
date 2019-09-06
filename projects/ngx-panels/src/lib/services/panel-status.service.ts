@@ -23,6 +23,10 @@ export class PanelStatusService implements IPanelStatusService {
         this.size += 1;
     }
 
+    decrement() {
+        this.size -= 1;
+    }
+
     // this method must not be called manually
     reset() {
         this.size = 0;

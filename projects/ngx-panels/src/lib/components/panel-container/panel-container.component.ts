@@ -5,7 +5,7 @@ import { Stack } from '../../classes/stack.class';
 import { PanelService } from '../../services/panel.service';
 import { isPlatformBrowser } from '@angular/common';
 import { PanelConfig } from '../../classes/config.class';
-import { NGX_PANELS_CONFIG } from '../../services/panel-status.service';
+import { NGX_PANELS_CONFIG, PanelStatusService } from '../../services/panel-status.service';
 
 
 
@@ -28,6 +28,7 @@ export class PanelContainerComponent implements OnInit {
 
     constructor(
         private panelService: PanelService,
+        private panelStatusService: PanelStatusService,
         private readonly renderer: Renderer2,
         private readonly elemRef: ElementRef,
         @Inject(NGX_PANELS_CONFIG) private readonly config: PanelConfig,
@@ -67,6 +68,22 @@ export class PanelContainerComponent implements OnInit {
             panel.panelComponentRef.destroy();
         });
         this.panels.empty();
+    }
+
+    get panelWidth() {
+        return this.isFloating ?
+            this.config.size + 'px' :
+            '100%';
+    }
+
+    get panelHeight() {
+        return this.isFloating ?
+            this.config.size + 'px' :
+            '100%';
+    }
+
+    get isOpen() {
+        return this.panelStatusService.isOpen;
     }
 
     get isRight() {

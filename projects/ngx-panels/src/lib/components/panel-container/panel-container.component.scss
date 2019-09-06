@@ -13,6 +13,12 @@
             right: 0;
             width: auto;
             height: 100%;
+            & /deep/ ngx-panel {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+            }
         }
 
         &--left {
@@ -21,6 +27,12 @@
             left: 0;
             width: auto;
             height: 100%;
+            & /deep/ ngx-panel {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+            }
         }
 
         &--top {
@@ -29,6 +41,12 @@
             left: 0;
             height: auto;
             width: 100%;
+            & /deep/ ngx-panel {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
         }
 
         &--bottom {
@@ -37,25 +55,52 @@
             left: 0;
             height: auto;
             width: 100%;
+            & /deep/ ngx-panel {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
         }
 
         &--floating {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0 , 0.1);
+        }
+    }
+
+    &__holder {
+        &--floating {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            max-height: 100%;
             top: 50%;
             left: 50%;
-            width: auto;
-            height: auto;
             transform: translate(-50%, -50%);
+        }
+        &--no-floating {
+            height: 100%;
+            width: 100%;
         }
     }
 
     &__panels {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        z-index: -1;
+        &--no-floating {
+            // position: absolute;
+            // top: 0;
+            // right: 0;
+            // bottom: 0;
+            // left: 0;
+            // display: flex;
+            // flex-direction: column;
+            // z-index: -1;
+        }
     }
 }

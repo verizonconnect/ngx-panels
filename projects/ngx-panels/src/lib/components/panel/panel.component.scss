@@ -7,5 +7,9 @@
         @include hoverShadow4dp();
         border-radius: 2px;
         background-color: $white;
+        &--floating {
+            position: absolute;
+            top: 0;
+        }
     }
 }
