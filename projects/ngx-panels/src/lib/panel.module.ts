@@ -1,15 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 
 import { PanelBodyComponent } from './components/panel-body/panel-body.component';
 import { PanelContainerComponent } from './components/panel-container/panel-container.component';
 import { PanelFooterComponent } from './components/panel-footer/panel-footer.component';
 import { PanelHeaderComponent } from './components/panel-header/panel-header.component';
 import { PanelComponent } from './components/panel/panel.component';
-import { PanelStatusService } from './services/panel-status.service';
+import { PanelStatusService, NGX_PANELS_CONFIG } from './services/panel-status.service';
 import { PanelService } from './services/panel.service';
-
-
+import { PanelConfig, DefaultPanelConfig } from './classes/config.class';
 
 @NgModule({
     imports: [CommonModule],
@@ -25,10 +24,10 @@ import { PanelService } from './services/panel.service';
     exports: [PanelContainerComponent, PanelHeaderComponent, PanelBodyComponent, PanelFooterComponent]
 })
 export class PanelModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(config: Partial<PanelConfig> = new DefaultPanelConfig()): ModuleWithProviders {
         return {
             ngModule: PanelModule,
-            providers: [PanelStatusService, PanelService],
+            providers: [PanelStatusService, PanelService, { provide: NGX_PANELS_CONFIG, useValue: config }],
         };
     }
 }

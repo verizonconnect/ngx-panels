@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { PanelConfig } from '../classes/config.class';
 
-
+export const NGX_PANELS_CONFIG = new InjectionToken<PanelConfig>('NGX_PANELS_CONFIG');
 
 export interface IPanelStatusService {
     isOpen: boolean;
@@ -20,6 +21,10 @@ export class PanelStatusService implements IPanelStatusService {
     // this method must not be called manually
     increment() {
         this.size += 1;
+    }
+
+    decrement() {
+        this.size -= 1;
     }
 
     // this method must not be called manually

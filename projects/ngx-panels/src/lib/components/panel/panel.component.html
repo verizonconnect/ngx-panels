@@ -1,3 +1,11 @@
-<div class="ngx-panel__main" [@panelState]="panelState" (@panelState.done)="onAnimationEvent($event)">
+<div class="ngx-panel__main"
+    [class.ngx-panel__main--right]="isRight"
+    [class.ngx-panel__main--left]="isLeft"
+    [class.ngx-panel__main--top]="isTop"
+    [class.ngx-panel__main--bottom]="isBottom"
+    [class.ngx-panel__main--floating]="isFloating"
+    [style.width]="panelWidth"
+    [style.height]="panelHeight"
+    [@panelState]="panelState" (@panelState.done)="onAnimationEvent($event)">
     <div class="ngx-panel__content" #contentContainer></div>
 </div>
