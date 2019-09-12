@@ -1,1 +1,18 @@
-<div class="ngx-panel-container__main"><div #panelContainer class="ngx-panel-container__panels"></div></div>
+<div class="ngx-panel-container__main" [style.display]="isOpen? 'block' : 'none'"
+    [class.ngx-panel-container__main--right]="isRight"
+    [class.ngx-panel-container__main--left]="isLeft"
+    [class.ngx-panel-container__main--top]="isTop"
+    [class.ngx-panel-container__main--bottom]="isBottom"
+    [class.ngx-panel-container__main--floating]="isFloating">
+    <div class="ngx-panel-container__holder"
+        [class.ngx-panel-container__holder--floating]="isFloating"
+        [class.ngx-panel-container__holder--no-floating]="!isFloating"
+        [style.width]="panelWidth"
+        [style.height]="panelHeight">  
+        <div class="ngx-panel-container__panels"
+            [class.ngx-panel-container__panels--floating]="isFloating"
+            [class.ngx-panel-container__panels--no-floating]="!isFloating">
+            <ng-container #panelContainer class="antani"></ng-container>
+        </div>
+    </div>
+</div>

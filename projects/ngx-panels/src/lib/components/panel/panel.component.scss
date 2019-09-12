@@ -4,14 +4,12 @@
 
 .ngx-panel {
     &__main {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 320px;
-        transform: translateX(100%);
         @include hoverShadow4dp();
         border-radius: 2px;
         background-color: $white;
+        &--floating {
+            position: absolute;
+            top: 0;
+        }
     }
 }

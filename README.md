@@ -55,6 +55,13 @@ export class AppComponent {
     }
 }
 ```
+### Configuration
+You can specify where the panels should be opened: on the left, the right, the top or the bottom, and even a floating one which is like a modal with an overlay. 
+Also you can set the dimension in pixels. In order to do this, just import the panel module using some parameters in `forRoot` method. 
+```typescript
+    PanelModule.forRoot({ side: PanelSide.LEFT, size: 600 })
+```
+Possible values of `PanelSide` are `PanelSide.RIGHT` (default value), `PanelSide.LEFT`, `PanelSide.TOP`, `PanelSide.BOTTOM` and `PanelSide.FLOATING`
 
 ### Stacking panels
 You can either open a panel on top of the previously opened ones (if any), stacking them
