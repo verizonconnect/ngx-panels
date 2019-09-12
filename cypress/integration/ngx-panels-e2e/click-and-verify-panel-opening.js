@@ -26,7 +26,9 @@ context('Actions', () => {
   it('Should open a stacked panel', () => {
     openStackedPanel();
 
-    cy.get('.ngx-panel__main').last().should('be.visible');
+    cy.get('.ngx-panel__main')
+      .last()
+      .should('be.visible');
 
     cy.get('.ngx-panel-header__content')
       .last()
@@ -40,7 +42,8 @@ context('Actions', () => {
       .last()
       .click();
 
-    cy.wait(300).get('.ngx-panel-footer__main .button')
+    cy.wait(300)
+      .get('.ngx-panel-footer__main .button')
       .first()
       .click();
 

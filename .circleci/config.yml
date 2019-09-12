@@ -14,4 +14,4 @@ jobs:
             - "node_modules"
       - run: npm run build:lib
       - run: npm run build
-      - run: npm run cy:run:parallel
+      - run: npm run runall
