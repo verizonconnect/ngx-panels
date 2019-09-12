@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "cy:open": "cypress open",
-    "cy:run": "./node_modules/.bin/wait-on http://localhost:4300 & cypress run --spec 'cypress/integration/ngx-panels-e2e/**/*'"
+    "cy:run": "./node_modules/.bin/wait-on http-get://localhost:4300/ && cypress run --spec 'cypress/integration/ngx-panels-e2e/**/*'",
+    "cy:run:parallel": "node_modules/.bin/concurrently -s \"first\" \"npm run serve\" \"npm run cy:run\""
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,7 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "concurrently": "4.1.1",
     "core-js": "^2.5.4",
     "cypress": "^3.3.2",
     "rxjs": "~6.3.3",
