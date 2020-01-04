@@ -5,14 +5,7 @@ jobs:
       - image: circleci/node:12-browsers
     steps:
       - checkout
-      - restore_cache:
-          key: AngularCircleCI-{{ .Branch }}-{{ checksum "package.json" }}
-      - run: npm install
-      - run: npm rebuild node-sass --force
-      - save_cache:
-          key: AngularCircleCI-{{ .Branch }}-{{ checksum "package.json" }}
-          paths:
-            - "node_modules"
+      - run: npm ci
       - run: npm run build:lib
       - run: npm run build
-      - run: npm run runall
+      - run: npsm run runall
