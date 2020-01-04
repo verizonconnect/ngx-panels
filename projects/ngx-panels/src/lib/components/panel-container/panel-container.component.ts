@@ -17,7 +17,7 @@ import { NGX_PANELS_CONFIG, PanelStatusService } from '../../services/panel-stat
 export class PanelContainerComponent implements OnInit {
     private panels: Stack<PanelRef<any>> = new Stack<PanelRef<any>>();
 
-    @ViewChild('panelContainer', { read: ViewContainerRef })
+    @ViewChild('panelContainer', { read: ViewContainerRef, static: true })
     viewContainer: ViewContainerRef;
 
     @Input()

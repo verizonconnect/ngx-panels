@@ -103,7 +103,7 @@ export class PanelComponent implements IPanelComponent, OnInit {
     @Output()
     panelCloseAnimationEnd: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-    @ViewChild('contentContainer', { read: ViewContainerRef })
+    @ViewChild('contentContainer', { read: ViewContainerRef, static: true })
     contentContainer: ViewContainerRef;
 
     panelState;
