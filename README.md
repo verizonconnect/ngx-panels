@@ -1,4 +1,5 @@
 [![npm version](https://badge.fury.io/js/%40verizon%2Fngx-panels.svg)](https://badge.fury.io/js/%40verizon%2Fngx-panels)
+[![CircleCI](https://circleci.com/gh/verizonconnect/ngx-panels/tree/master.svg?style=svg)](https://circleci.com/gh/verizonconnect/ngx-panels/tree/master)
 
 # Angular Panel Library (ngx-panels)
 ### An [Angular](https://angular.io/) library for creating beautiful, dynamic panels
