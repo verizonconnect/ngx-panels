@@ -1,6 +1,6 @@
 {
-  "name": "ngx-panels",
-  "version": "0.0.1",
+  "name": "@verizon/ngx-panels",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
