@@ -11,3 +11,4 @@ export * from './lib/components/panel-body/panel-body.component';
 export * from './lib/components/panel-footer/panel-footer.component';
 export * from './lib/components/panel/panel.component';
 export * from './lib/components/panel-container/panel-container.component';
+export * from './lib/classes/config.class';

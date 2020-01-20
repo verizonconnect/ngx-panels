@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PanelRef } from 'projects/ngx-panels/src/lib';
+import { PanelRef } from 'ngx-panels';
 
 @Component({
     selector: 'statement-panel',

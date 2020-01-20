@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PanelService } from 'projects/ngx-panels/src/lib';
+import { PanelService } from 'ngx-panels';
 
 import { Robot } from './models/robot.model';
 import { RobotPanelComponent } from './robot-panel/robot-panel.component';
