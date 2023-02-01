@@ -101,6 +101,9 @@ const ANIMATION_FLOATING_VISIBLE = {
 })
 export class PanelComponent implements IPanelComponent, OnInit {
     @Output()
+    panelOpenAnimationEnd: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+    @Output()
     panelCloseAnimationEnd: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     @ViewChild('contentContainer', { read: ViewContainerRef, static: true })
@@ -118,9 +121,19 @@ export class PanelComponent implements IPanelComponent, OnInit {
     }
 
     onAnimationEvent(evt: AnimationEvent) {
-        if (evt.fromState !== 'void' && this.isClosed(evt.toState)) {
+        if (evt.fromState === 'void' && this.isOpen(evt.toState)) {
+            this.panelOpenAnimationEnd.emit(true);
+        } else if (evt.fromState !== 'void' && this.isClosed(evt.toState)) {
             this.panelCloseAnimationEnd.emit(true);
         }
+    }
+
+    private isOpen(evtState: string): boolean {
+        return evtState === OPEN_RIGHT
+            || evtState === OPEN_LEFT
+            || evtState === OPEN_TOP
+            || evtState === OPEN_BOTTOM
+            || evtState === OPEN_FLOATING;
     }
 
     private isClosed(evtState: string): boolean {
@@ -137,6 +150,11 @@ export class PanelComponent implements IPanelComponent, OnInit {
 
     private openState(): string {
         return `open-${this.config.side}`;
+    }
+
+    startOpenAnimation() {
+        this.panelState = this.openState();
+        this.ref.markForCheck();
     }
 
     startCloseAnimation() {
