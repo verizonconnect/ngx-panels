@@ -4,8 +4,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { PanelContainerComponent } from '../components/panel-container/panel-container.component';
 import { IPanelComponent } from '../components/panel/panel.interface';
 
-
-
 export interface IPanelRef<Data> {
     readonly closeEnabled$: Observable<boolean>;
     readonly data: Data;
@@ -21,6 +19,8 @@ export class PanelRef<Data> implements IPanelRef<Data> {
     private panelCmpRef: ComponentRef<IPanelComponent>;
     private panelContainer: PanelContainerComponent;
     private panelData: Data;
+
+    public guestComponent: any;
 
     private closeEnabledSubject: BehaviorSubject<boolean> = new BehaviorSubject(true);
 
