@@ -24,7 +24,7 @@ export class PanelService implements IPanelService {
         private readonly panelStatusService: PanelStatusService
     ) {}
 
-    // this method must not be called manually 
+    // this method must not be called manually
     setContainer(panelContainer: PanelContainerComponent) {
         if (this.panelContainer) {
             throw Error('You are using two <ngx-panel-containers> inside HTML. Please leave just one.');
@@ -47,9 +47,10 @@ export class PanelService implements IPanelService {
     }
 
     open<Content, Data>(content: Type<Content>, data?: Data, providers?: StaticProvider[]): PanelRef<Data> {
+        const wasOpenBefore: boolean = this.panelStatusService.isOpen;
         this.panelStatusService.increment();
         const panelRef: PanelRef<Data> = this.appendPanel(PanelComponent, content, data, providers);
-        if (!this.panelStatusService.isOpen) {
+        if (!wasOpenBefore) {
             this.panelStatusService.notifyOpen();
         }
         return panelRef;
@@ -86,6 +87,7 @@ export class PanelService implements IPanelService {
             panelRef.setData(data);
         }
         panelComponentRef.instance.contentContainer.insert(contentComponentRef.hostView);
+        panelRef.guestComponent = contentComponentRef.instance;
 
         this.panelContainer.addTopPanel(panelRef);
 
